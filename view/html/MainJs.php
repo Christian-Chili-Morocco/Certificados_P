@@ -6,4 +6,8 @@
     <script src="../../public/lib/jquery-ui/jquery-ui.js"></script>
     <script src="../../public/lib/jquery-switchbutton/jquery.switchButton.js"></script>
     <script src="../../public/lib/peity/jquery.peity.js"></script>
+    <script src="../../public/lib/highlightjs/highlight.pack.js"></script>
+    <script src="../../public/lib/datatables/jquery.dataTables.js"></script>
+    <script src="../../public/lib/datatables-responsive/dataTables.responsive.js"></script>
+    <script src="../../public/lib/select2/js/select2.min.js"></script>
     <script src="../../public/js/bracket.js"></script>
