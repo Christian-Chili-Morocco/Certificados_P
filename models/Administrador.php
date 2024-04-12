@@ -13,7 +13,7 @@
                     exit();
                     
                 }else{
-                    $sql = "SELECT * FROM admin_table WHERE admin_correo=? and admin_pass=? and State=1";
+                    $sql = "SELECT * FROM admin_table WHERE admin_correo=? and admin_pass=? and state=1";
                     $stmt = $conectar->prepare($sql);
                     $stmt -> bindValue(1,$correo);
                     $stmt -> bindValue(2,$pass);
@@ -34,6 +34,16 @@
                 }
             }
         }
+        public function get_alumnos(){
+           
+                $conectar = parent::Conexion();
+                parent::set_names();
+                $sql = "SELECT * FROM certificados";
+                $sql = $conectar->prepare($sql);
+                $sql -> execute();
+                return $resultado = $sql->fetchAll();
+        }
+        
     }
 
 ?>

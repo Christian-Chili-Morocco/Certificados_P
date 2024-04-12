@@ -11,6 +11,7 @@
               <img src="http://via.placeholder.com/64x64" class="wd-32 rounded-circle" alt="">
               <span class="square-10 bg-success"></span>
             </a>
+            <input type="hidden" id="usu_idx" value="<?php echo $SESSION["admin_id"]?>"> <!-- ADMIN_ID DEL USUARIO -->
             <div class="dropdown-menu dropdown-menu-header wd-200">
               <ul class="list-unstyled user-profile-nav">
                 <li><a href="../AdmPerfil/"><i class="icon ion-ios-person"></i> Perfil</a></li>
