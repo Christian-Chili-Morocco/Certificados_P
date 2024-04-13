@@ -23,8 +23,8 @@
                 $sub_array[] = $row["nombre_certificado"];
                 $sub_array[] = $row["fecha_emision"];
                 $sub_array[] = $row["fecha_vencimiento"];
-                $sub_array[] = '<a href="../../files/' . $row['descarga_certificados'] . '">Descargar</a>';
-/*              $sub_array[] = $row["descarga_diapositivas"]; */
+                $sub_array[] = '<a href="../../files/PDF/' . $row['descarga_certificados'] . '">Descargar</a>';
+                $sub_array[] = '<a href="../../files/DIAPO/' . $row['descarga_diapositivas'] . '">Descargar</a>';
                 $sub_array[] = $row["nacionalidad"];
                 $data[]= $sub_array;
             }
@@ -35,8 +35,6 @@
                 "aaData"=>$data);
             echo json_encode($results);
             break;
-
-
     }
 
 ?>

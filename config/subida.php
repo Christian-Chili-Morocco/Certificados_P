@@ -1,5 +1,5 @@
 <?php
-    if(isset($_FILES['archivocerti'])){
+    if(isset($_FILES['archivocerti']) || isset($_FILES['archivodiapo'])){
         extract($_POST);
         $nombre = $_POST['nombre'];
         $tipo_de_documento = $_POST['tipo_de_documento'];
@@ -8,15 +8,18 @@
         $nacionalidad = $_POST['nacionalidad'];
         $fechaemi = $_POST['fechaemi'];
         $fechaven = $_POST['fechaven'];
+        $carpeta_destino1 = "../files/PDF/";
+        $carpeta_destino2 = "../files/DIAPO/";
 
-        $carpeta_destino = "../files/";
+        $nombre_archivo1 = basename($_FILES["archivocerti"]["name"]);
+        $extension1 = strtolower(pathinfo($nombre_archivo1, PATHINFO_EXTENSION));
+        $nombre_archivo2 = basename($_FILES["archivodiapo"]["name"]);
+        $extension2 = strtolower(pathinfo($nombre_archivo2, PATHINFO_EXTENSION));
 
-        $nombre_archivo = basename($_FILES["archivocerti"]["name"]);
-        $extension = strtolower(pathinfo($nombre_archivo, PATHINFO_EXTENSION));
 
-        if ($extension == "pdf" || $extension == "doc" || $extension == "docx"){
+        if ($extension1 == "pdf" || $extension1 == "doc" || $extension1 == "docx" || $extension2 == "pdf" || $extension2 == "doc" || $extension2 == "docx"){
 
-        if(move_uploaded_file($_FILES['archivocerti']['tmp_name'], $carpeta_destino . $nombre_archivo)){
+        if(move_uploaded_file($_FILES['archivocerti']['tmp_name'], $carpeta_destino1 . $nombre_archivo1) && move_uploaded_file($_FILES['archivodiapo']['tmp_name'], $carpeta_destino2 . $nombre_archivo2) ){
             $host = "localhost";
             $user = "root";
             $password = "";
@@ -27,24 +30,24 @@
             mysqli_connect_error() ;
         }
             $sql = "INSERT INTO certificados (nombre_completo, tipo_documento, numero_documento, nombre_certificado, nacionalidad, fecha_emision, fecha_vencimiento, descarga_certificados, descarga_diapositivas)
-            VALUES ('$nombre', '$tipo_de_documento', '$ndocumento', '$ncertificado', '$nacionalidad', $fechaemi, $fechaven, '$nombre_archivo', null)";
+            VALUES ('$nombre', '$tipo_de_documento', '$ndocumento', '$ncertificado', '$nacionalidad', '$fechaemi', '$fechaven', '$nombre_archivo1', '$nombre_archivo2')";
             $resultado = mysqli_query($conexion, $sql);
             if ($resultado) {
                 echo "<script language='JavaScript'>
                 alert('Archivo Subido');
-                location.assign('../../view/AdmHome'');
+                location.assign('../../CERTIFICADOS_P/view/AdmHome/');
                 </script>";
             } else {
 
                 echo "<script language='JavaScript'>
                 alert('Error al subir el archivo: ');
-                location.assign('../../view/AdmHome');
+                location.assign('../../view/AdmHome/');
                 </script>";
             }
         } else {
             echo "<script language='JavaScript'>
             alert('Error al subir el archivo. ');
-            /* location.assign('../../view/AdmHome'); */
+            /* location.assign('../../view/AdmHome/'); */
             </script>";
         }
     } else {

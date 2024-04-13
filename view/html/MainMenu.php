@@ -8,22 +8,10 @@
             <span class="menu-item-label">Inicio</span>
           </div>
         </a>
-        <a href="../AddUser/" class="br-menu-link">
-          <div class="br-menu-item">
-            <i class="menu-item-icon icon ion-ios-bookmarks-outline tx-24"></i>
-            <span class="menu-item-label">Agregar Estudiantes</span>
-          </div>
-        </a>
         <a href="../AddCertificado/" class="br-menu-link">
           <div class="br-menu-item">
             <i class="menu-item-icon icon ion-ios-paper tx-24"></i>
             <span class="menu-item-label">Agregar Certificados</span>
-          </div>
-        </a>
-        <a href="../AdmPerfil/" class="br-menu-link">
-          <div class="br-menu-item">
-            <i class="menu-item-icon icon ion-ios-gear-outline tx-24"></i>
-            <span class="menu-item-label">Perfil</span>
           </div>
         </a>
         <a href="../html/Logout.php" class="br-menu-link">

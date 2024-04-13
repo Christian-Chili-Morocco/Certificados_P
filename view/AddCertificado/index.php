@@ -78,7 +78,7 @@
                 <div class="col-lg-6">
                   <div class="form-group mg-b-10-force">
                     <label class="form-control-label">Fecha de Emisión: <span class="tx-danger">*</span></label>
-                    <input format="yyyy-MM-dd"class="form-control" type="date" name="fechaemi" id="fechaemi"  placeholder="Ingresa tu fecha">
+                    <input class="form-control" type="date" name="fechaemi" id="fechaemi"  placeholder="Ingresa tu fecha">
                   </div>
                 </div>
                 <div class="col-lg-6">
@@ -89,20 +89,17 @@
                 </div>
                 <div class="col-lg-6 mg-t-15">
                   <div class="form-group mg-b-10-force">
-                  
                     <label for="archivocerti">Cargar Certificado:</label>
                     <input type="file" id="archivocerti" name="archivocerti">
-                  </form>
                   </div>
                 </div>
-                <!-- <div class="col-lg-6 mg-t-15">
+                <div class="col-lg-6 mg-t-15">
                   <div class="form-group mg-b-10-force">
-                  <form>
                     <label for="archivodiapo">Cargar Diapositiva:</label>
                     <input type="file" id="archivodiapo" name="archivodiapo">
-                  </form>
+            </form>
                   </div>
-                </div> -->
+                </div>
                 
               </div><!-- row -->
 
