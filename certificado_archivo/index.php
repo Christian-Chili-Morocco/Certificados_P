@@ -50,7 +50,7 @@
                             <option value="DNI">DNI</option>
                             <option value="RUC">RUC</option>  
                             <option value="CE">CE</option>
-                            <option value="PASAPORTE">PASAPORTE</option>
+                            <option value="PPT">PPT</option>
                             </select>
                         </div>
                         </div>

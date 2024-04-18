@@ -29,6 +29,7 @@
                                 $sub_array[] = $row["tipo_documento"];
                                 $sub_array[] = $row["numero_documento"];
                                 $sub_array[] = $row["nombre_completo"];
+                                $sub_array[] = $row["id_certificados"];
                                 $sub_array[] = $row["nombre_certificado"];
                                 $sub_array[] = $row["fecha_emision"];
                                 $sub_array[] = $row["fecha_vencimiento"];
@@ -56,6 +57,7 @@
                         echo '<td>TIPO DE DOCUMENTO</td>';
                         echo '<td>NUMERO DE DOCUMENTO</td>';
                         echo '<td>NOMBRE DE ALUMNO</td>';
+                        echo '<td>ID CERTIFICADO</td>';
                         echo '<td>CERTIFICADO</td>';
                         echo '<td>FECHA DE EMISIÓN</td>';
                         echo '<td>FECHA DE VENCIMIENTO</td>';

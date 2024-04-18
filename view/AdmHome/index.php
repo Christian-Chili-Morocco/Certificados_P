@@ -46,11 +46,13 @@
                   <th class="wd-1p">Documento</th>
                   <th class="wd-20p">Alumno</th>
                   <th class="wd-15p">Certificado</th>
+                  <th class="wd-5p">Nro. Certificado</th>
                   <th class="wd-10p">Fecha de Emisión</th>
                   <th class="wd-25p">Fecha de Vencimiento</th>
                   <th class="wd-5p">PDF</th>
                   <th class="wd-5p">DIAPO</th> 
                   <th class="wd-15p">Nacionalidad</th>
+                  <th class="wd-5p"></th>
                 </tr>
               </thead>
               <tbody>

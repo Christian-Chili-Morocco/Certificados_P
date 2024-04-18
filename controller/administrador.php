@@ -21,11 +21,13 @@
                 $sub_array[] = $row["numero_documento"];
                 $sub_array[] = $row["nombre_completo"];
                 $sub_array[] = $row["nombre_certificado"];
+                $sub_array[] = $row["id_certificados"];
                 $sub_array[] = $row["fecha_emision"];
                 $sub_array[] = $row["fecha_vencimiento"];
                 $sub_array[] = '<a href="../../files/PDF/' . $row['descarga_certificados'] . '">Descargar</a>';
                 $sub_array[] = '<a href="../../files/DIAPO/' . $row['descarga_diapositivas'] . '">Descargar</a>';
                 $sub_array[] = $row["nacionalidad"];
+                $sub_array[] = '<a href="../../config/eliminar.php?id_certificados='.$row["id_certificados"].'">ELIMINAR</a>';
                 $data[]= $sub_array;
             }
             $results = array(

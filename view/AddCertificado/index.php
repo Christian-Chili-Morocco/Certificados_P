@@ -53,7 +53,7 @@
                       <option value="DNI">DNI</option>
                       <option value="RUC">RUC</option>  
                       <option value="CE">CE</option>
-                      <option value="PASAPORTE">PASAPORTE</option>
+                      <option value="PPT">PPT</option>
                     </select>
                   </div>
                 </div>
@@ -63,10 +63,16 @@
                     <input class="form-control" type="text" name="ndocumento" id="ndocumento"  placeholder="Ingresa tu número de documento">
                   </div>
                 </div><!-- col-4 -->
-                <div class="col-lg-8">
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <label class="form-control-label">Id del Certificado: <span class="tx-danger">*</span></label>
+                    <input class="form-control" type="text" name="idcertificado" id="idcertificado"  placeholder="Ingresa el id del certificado">
+                  </div>
+                </div>
+                <div class="col-lg-4">
                   <div class="form-group">
                     <label class="form-control-label">Nombre del Certificado: <span class="tx-danger">*</span></label>
-                    <input class="form-control" type="text" name="ncertificado" id="ncertificado"  placeholder="Ingresa el nombre de tu certificado">
+                    <input class="form-control" type="text" name="ncertificado" id="ncertificado"  placeholder="Ingresa el nombre del certificado">
                   </div>
                 </div><!-- col-4 -->
                 <div class="col-lg-4">

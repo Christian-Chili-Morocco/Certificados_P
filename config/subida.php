@@ -3,6 +3,7 @@
         extract($_POST);
         $nombre = $_POST['nombre'];
         $tipo_de_documento = $_POST['tipo_de_documento'];
+        $idcertificado = $_POST['idcertificado'];
         $ndocumento = $_POST['ndocumento'];
         $ncertificado = $_POST['ncertificado'];
         $nacionalidad = $_POST['nacionalidad'];
@@ -29,8 +30,8 @@
             echo "No se realizo la conexion a la basa de datos, el error fue:".
             mysqli_connect_error() ;
         }
-            $sql = "INSERT INTO certificados (nombre_completo, tipo_documento, numero_documento, nombre_certificado, nacionalidad, fecha_emision, fecha_vencimiento, descarga_certificados, descarga_diapositivas)
-            VALUES ('$nombre', '$tipo_de_documento', '$ndocumento', '$ncertificado', '$nacionalidad', '$fechaemi', '$fechaven', '$nombre_archivo1', '$nombre_archivo2')";
+            $sql = "INSERT INTO certificados (id_certificados, nombre_completo, tipo_documento, numero_documento, nombre_certificado, nacionalidad, fecha_emision, fecha_vencimiento, descarga_certificados, descarga_diapositivas)
+            VALUES ('$idcertificado', '$nombre', '$tipo_de_documento', '$ndocumento', '$ncertificado', '$nacionalidad', '$fechaemi', '$fechaven', '$nombre_archivo1', '$nombre_archivo2')";
             $resultado = mysqli_query($conexion, $sql);
             if ($resultado) {
                 echo "<script language='JavaScript'>
